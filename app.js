@@ -1,12 +1,6 @@
-'use strict';
-
-var who = function (context, payload, req, res) {
-  res.send(200, {
-    uuid: encodeURIComponent(context.user.uuid)
-  });
-};
+const sample = require('./services/sample');
 
 exports.configure = function (app) {
   // register route handlers
-  app.get('/who', who);
+  app.get('/who', sample.who);
 };
