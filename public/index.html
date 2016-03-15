@@ -4,12 +4,17 @@
 <head>
     <title>the app</title>
     <script src="bundle.js"></script>
+    <link rel="import" href="scripts/components/sample-element.html">
 </head>
 <body>
     <div>
-        <h3>It's the app!</h3>
         <div ng-app="myApp">
+            <h3>Angular App</h3>
             <pre>It work: {{!false}}</pre>
+        </div>
+        <div>
+            <h3>Polymer components</h3>
+            <sample-element></sample-element>
         </div>
     </div>
 </body>
