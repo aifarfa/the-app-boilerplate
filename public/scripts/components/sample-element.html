@@ -2,7 +2,7 @@
 <dom-module id="sample-element">
     <template>
         <div>
-            <input value="{{value::input}}" placeholder="[[placeholder]]" />
+            <input id="textInput" value="{{value::input}}" placeholder="[[placeholder]]" />
         </div>
         <div>value: {{value}}</div>
     </template>
@@ -17,7 +17,8 @@
                 observer: 'valueChanged'
             },
             placeholder: {
-                type: String
+                type: String,
+                notify: true
             }
         },
 
@@ -26,7 +27,7 @@
         },
 
         valueChanged: function(val, old) {
-            console.log('value changed:' + value);
+            // console.log('value changed:' + val);
         }
     })
     </script>
