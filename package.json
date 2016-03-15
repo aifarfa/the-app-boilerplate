@@ -4,12 +4,28 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "./node_modules/.bin/webpack-dev-server --content-base public"
   },
   "license": "ISC",
   "devDependencies": {
+    "angular-mocks": "^1.5.0",
     "chai": "^3.5.0",
+    "istanbul": "^0.3.22",
+    "istanbul-instrumenter-loader": "^0.2.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.5",
+    "karma-mocha": "^0.2.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "sinon": "^1.17.3"
+    "sinon": "^1.17.3",
+    "watchify": "^3.7.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.7"
   }
 }
