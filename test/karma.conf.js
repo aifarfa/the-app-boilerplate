@@ -60,19 +60,19 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage'],
 
     coverageReporter: {
-      // dir: 'reports/',
+      dir: 'coverage/client/',
       // includeAllSources: true,
       // instrumenterOptions: {
       //   istanbul: {
       //     noCompact: true
       //   }
       // },
-      // reporters: [{
-      //   type: 'cobertura',
-      //   subdir: '.',
-      //   file: 'cobertura-client.xml'
-      // }]
-      type: 'text'
+      reporters: [{
+        type: 'cobertura',
+        subdir: '.',
+        file: 'cobertura-client.xml'
+      }]
+      // type: 'text'
     },
 
 

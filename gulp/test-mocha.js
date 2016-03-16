@@ -17,7 +17,7 @@ gulp.task('test:server', ['pre-test'], function () {
       // dir: './reports/server',
       reporters: ['lcov', 'cobertura', 'text-summary'],
       reportOpts: {
-        dir: './reports'
+        dir: './coverage/service/'
       }
     }));
 });

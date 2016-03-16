@@ -14,6 +14,7 @@
     "gulp": "^3.9.1",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
+    "gulp-webpack": "^1.5.0",
     "istanbul": "^0.3.22",
     "istanbul-instrumenter-loader": "^0.2.0",
     "karma": "^0.13.22",
@@ -25,6 +26,8 @@
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
     "watchify": "^3.7.0",
+    "web-component-tester": "^4.2.2",
+    "web-component-tester-istanbul": "^0.10.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
