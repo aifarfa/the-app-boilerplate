@@ -5,6 +5,5 @@
     "type": "WebApp",
     "version": "0.0.2",
     "defaultPage": "public/index.html",
-    "defaultPlatform": "NodeJS",
-    "enableCrossDomain" : false
+    "defaultPlatform": "NodeJS"
 }
