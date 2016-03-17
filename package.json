@@ -13,6 +13,7 @@
     "browser-sync": "^2.11.1",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-directory-sync": "^1.2.3",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
     "gulp-shell": "^0.5.2",
