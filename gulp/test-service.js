@@ -10,8 +10,8 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test:server', ['pre-test'], function () {
-  return gulp.src(['test/server/**/*.js'])
+gulp.task('test:service', ['pre-test'], function () {
+  return gulp.src(['test/service/**/*.js'])
     .pipe(mocha())
     .pipe(istanbul.writeReports({
       // dir: './reports/server',

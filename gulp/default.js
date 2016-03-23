@@ -7,23 +7,38 @@ const run = require('run-sequence');
 const watch = require('gulp-watch');
 
 gulp.task('default', (done) => {
-  run('test:server', 'test:client', 'webpack', 'sync', 'appengine:start', 'watch', done);
+  run('build', 'sync', 'appengine:stop', 'appengine:start', 'watch', done);
+});
+
+gulp.task('build', (done) => {
+  run('move', 'typescript', 'webpack', done);
+});
+
+gulp.task('test', ['test:service', 'test:wct'], (done) => {
+  done();
 });
 
 gulp.task('watch', () => {
   browserSync.init({
     proxy: 'http://localhost:10030/Apps/' + appJson.name + '/' + appJson.version + '/',
-    browser: ['google chrome']
+    browser: ['google chrome'],
+    reloadDelay: 3000
   });
-
 
   // HTML changed: HTML should be in the root folder or public folder only
   watch([
+    './index.html',
     './public/**/*.html',
+    './public/scripts/bundle.js',
     './public/css/**/*.css',
     './test/**/*.html'
   ], function (file) {
-    run('sync', browserSync.reload);
+    run(['sync'], browserSync.reload);
   });
 
+  watch([
+    './public/scripts/app.js'
+  ], function(file){
+    run(['webpack']);
+  });
 });

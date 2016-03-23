@@ -5,18 +5,21 @@
   "main": "app.js",
   "scripts": {
     "test": "karma start ./test/karma.conf.js",
-    "start": "./node_modules/.bin/webpack-dev-server --content-base public"
+    "start": "./node_modules/.bin/webpack-dev-server --content-base public",
+    "postinstall": "bower install"
   },
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.5.0",
     "browser-sync": "^2.11.1",
     "chai": "^3.5.0",
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-directory-sync": "^1.2.3",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
     "gulp-shell": "^0.5.2",
+    "gulp-typescript": "^2.12.1",
     "gulp-wait": "0.0.2",
     "gulp-watch": "^4.3.5",
     "gulp-webpack": "^1.5.0",

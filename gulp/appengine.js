@@ -26,12 +26,13 @@ gulp.task('appengine:stop', () => {
 
   shell.task([
     'c:/eae/tools/eae.exe --stop',
-    'taskkill /F /IM TR.AppServer.exe'
-  ], options);
-
+    'taskkill /F /IM TR.AppServer.exe',
+    'taskkill /F /IM TR.AppServer.Manager.exe'
+  ], options)();
+  return gulp.src('').pipe(wait(3000));
 });
 
-gulp.task('appengine:start', ['appengine:stop'], () => {
+gulp.task('appengine:start', [], () => {
   childProcess.spawn('c:/eae/tools/eae.exe', ['--start'], {
     stdio: 'inherit'
   });
